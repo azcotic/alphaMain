@@ -14,3 +14,10 @@
   <app-root></app-root>
 <script src="runtime.42d6e5ac77eb3556.js" type="module"></script><script src="polyfills.b82cac3122e01ca6.js" type="module"></script><script src="main.c31210574c7eb9e1.js" type="module"></script></body>
 </html>
+<script>
+  if (sessionStorage.redirect) {
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    history.replaceState(null, null, redirect);
+  }
+</script>
